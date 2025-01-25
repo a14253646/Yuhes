@@ -2,7 +2,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle } from "lucide-react"
 import UpcomingMatches from "./components/UpcomingMatches"
-import OptimizedImage from "./components/OptimizedImage"
 import ResultsTable from "./components/ResultsTable"
 
 const pricingPlans = [
@@ -30,12 +29,11 @@ export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-6 sm:py-12">
       <section className="text-center mb-8 sm:mb-16">
-        <OptimizedImage src="/logo.png" alt="煜赫國際 Logo" width={200} height={100} className="mx-auto mb-4" />
         <h1 className="text-5xl sm:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
           <span className="text-primary">煜赫國際</span>
         </h1>
         <p className="text-xl sm:text-2xl mb-4 sm:mb-6 text-muted-foreground font-light">
-          本司與多個球賽官方成員有長期穩定的合作通道
+          本司與多個球賽官方成員有長期���定的合作通道
         </p>
       </section>
 
@@ -55,17 +53,6 @@ export default function HomePage() {
           <li className="flex items-start">
             <CheckCircle className="text-primary mr-3 h-6 w-6 mt-1 flex-shrink-0" />
             <span className="leading-relaxed">凡合作過一次的客戶,我們提供不中額外加賠110%返還210%!</span>
-          </li>
-          <li className="bg-primary/10 p-4 sm:p-6 rounded-lg">
-            <div className="flex items-start">
-              <CheckCircle className="text-primary mr-3 h-6 w-6 mt-1 flex-shrink-0" />
-              <span className="text-primary font-semibold leading-relaxed">
-                如果對勝率有疑慮，您可以選擇購買料後不下注，與我們對賭。
-              </span>
-            </div>
-            <p className="mt-3 text-base sm:text-lg leading-relaxed">
-              例如，購買 500U 的協議料，不中時將賠付您 1100U（料費 + 雙倍賠付），水位相當於 1.2，讓您更加安心！
-            </p>
           </li>
         </ul>
       </section>
@@ -94,26 +81,6 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </section>
-
-      <section className="mb-8 sm:mb-16 bg-card p-6 sm:p-10 rounded-lg shadow-lg">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-primary">我們的合作理念</h2>
-        <p className="text-xl sm:text-2xl text-center mb-6 sm:mb-8 text-card-foreground font-light">
-          我們以共贏為目標：
-        </p>
-        <ul className="space-y-4 sm:space-y-6 text-card-foreground text-base sm:text-lg">
-          {[
-            "您的每一次盈利，都是我們合作的基石。",
-            "我們希望與您長期合作，共創輝煌！",
-            "只有您長期盈利，我們才能長期合作下去！",
-            "您虧錢我們也是虧，所以我們是最希望你能贏錢的！",
-          ].map((item, index) => (
-            <li key={index} className="flex items-start">
-              <CheckCircle className="text-primary mr-3 h-6 w-6 mt-1 flex-shrink-0" />
-              <span className="leading-relaxed">{item}</span>
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="mb-8 sm:mb-16">
